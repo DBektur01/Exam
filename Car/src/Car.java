@@ -49,16 +49,18 @@ public class Car  implements Type{
 
 
     @Override
-    public void bodyTypeIdentification(TypeCar typeCar) {
-        switch (typeCar){
-            case SUV -> System.out.println("внедорожник классындагы машина");
-            case CROSSOVER -> System.out.println("внедорожник классындагы машина");
-
-            case SEDAN-> System.out.println("легковой классындагы машина");
-            case HATCHBACK-> System.out.println("легковой классындагы машина");
-
-            case  STATION_WAGON -> System.out.println("универсал классындагы машина");
-        }
+      public String bodyTypeIdentification(TypeCar typeCar) {
+        switch (typeCar) {
+            case SEDAN:
+            case HATCHBACK:
+                return "легковой классындагы машина";
+            case CROSSOVER:
+            case SUV:
+                return "внедорожник классындагы машина";
+            case STATION_WAGON:
+                return "универсал классындагы машина";
+            default:
+        }return " Error ";
     }
 
     @Override
